@@ -172,6 +172,8 @@ static void test_tx_transfers(enum mspi_io_mode io_mode)
 	};
 	struct mspi_xfer_packet packet = {
 		.dir = MSPI_TX,
+ZTEST(mspi_with_spis, test_tx_quad_1_4_4)
+{
 		.cmd = 0x87654321,
 		.address = 0x12345678,
 		.data_buf = packet_buf,
